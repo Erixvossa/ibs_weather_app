@@ -33,18 +33,29 @@ const MainApp = () => {
                 const { location, current, forecast } = allData;
                 const { name } = location;
                 const tomorrow = forecast.forecastday[1];
-                const dayAfterTomorrow = forecast.forecastday[2];
-                //const { day } = tomorrow;
-                //const tomorrowTemp = day.avgtemp_c;
+                const tomorrowTemp = tomorrow.day.avgtemp_c;
+                const tomorrowDate = tomorrow.date;
+                const tomorrowIcon = tomorrow.day.condition.icon;
 
-                const { condition } = current;
+                const dayAfterTomorrow = forecast.forecastday[2];
+                const dayAfterTomorrowTemp = dayAfterTomorrow.day.avgtemp_c;
+                const dayAfterTomorrowDate = dayAfterTomorrow.date;
+                const dayAfterTomorrowIcon = dayAfterTomorrow.day.condition.icon;
+
+                const { condition, } = current;
+                const todayTempetature = current.temp_c;
                 const { icon, text } = condition;
                 const obj = {
+                    todayTempetature,
                     name,
                     icon,
                     text,
-                    tomorrow,
-                    dayAfterTomorrow,
+                    tomorrowTemp,
+                    tomorrowDate,
+                    tomorrowIcon,
+                    dayAfterTomorrowTemp,
+                    dayAfterTomorrowDate,
+                    dayAfterTomorrowIcon
                 }
                 console.log(allData);
                 console.log(obj);
@@ -68,14 +79,6 @@ const MainApp = () => {
         setTime(time);
     };
 
-    const getCurrTime = () => {
-        //  let time = new Date().toLocaleTimeString();
-        //  let arr = time.split("");
-        //  let dayRnight = arr.slice(-2)[0];
-        //  let firstIn = arr[0];
-        //  console.log(firstIn);
-    };
-    getCurrTime();
 
     return (
         <div>
@@ -86,8 +89,8 @@ const MainApp = () => {
                             <Form getCity={getCity} />
                             <Display data={data} time={time} />
                             <div className="forecast-container">
-                                <Forecast data={data.tomorrow}/>
-                                <Forecast data={data.dayAfterTomorrow}/>
+                                <Forecast temp={data.tomorrowTemp} nextDate={data.tomorrowDate} icon={data.tomorrowIcon}/>
+                                <Forecast temp={data.dayAfterTomorrowTemp} nextDate={data.dayAfterTomorrowDate} icon={data.dayAfterTomorrowIcon}/>
                             </div>
                         </div>
                     ) : (

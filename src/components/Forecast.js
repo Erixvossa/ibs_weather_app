@@ -1,16 +1,21 @@
 import React from "react";
 
-const Forecast = (props) => {
+const Forecast = ({ temp, nextDate, icon }) => {
 
-    const todayData = props.data;
-    console.log(todayData);
-    // const { date } = props.data;
-    // console.log(date);
+    const todayTemp = temp;
+    const todayDate = nextDate;
+    const todayIcon = icon
+
 
     return(
     <div className="forecast-card">
-        <p className="forecast-card__title">Завтра</p>
-        {/*<p className="">{props.data.date}</p>*/}
+        <img
+            alt=""
+            className=""
+            src={`${todayIcon}`}
+        />
+        <p className="forecast-card__title">{todayDate}</p>
+        <p className="">Температура: {todayTemp}&#176;</p>
         <p className=""></p>
 
     </div>

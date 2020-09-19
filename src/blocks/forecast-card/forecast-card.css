@@ -1,11 +1,13 @@
 .forecast-card {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     align-self: center;
     background-color: #aaaaaa;
-    width: 45%;
+    width: 50%;
     color: aliceblue;
     border: 2px solid aliceblue;
     border-radius: 5px;

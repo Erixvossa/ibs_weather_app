@@ -1,8 +1,19 @@
 @import url(./__image/current-weather__image.css);
 @import url(./__time-container/current-weather__time-container.css);
+@import url(./__title/current-weather__title.css);
 
 .current-weather {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    display: flex;
+    -webkit-appearance: none;
+    appearance: none;
+    align-self: center;
+    background-color: #aaaaaa;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    margin-top: 2px;
+    position: relative;
+    text-align: center;
 }

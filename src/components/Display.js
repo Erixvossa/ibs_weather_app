@@ -1,6 +1,6 @@
 import React from "react";
-import { convertTimes, getDate } from "./HelperFunctions";
-import Forecast from "./Forecast";
+import { getDate } from "./HelperFunctions";
+
 
 const Display = ({ data, time }) => {
     const gettingDate = getDate();
@@ -8,13 +8,14 @@ const Display = ({ data, time }) => {
     return (
         <div className="current-weather">
             <img
-                alt=""
+                alt={data.text}
                 className="current-weather__image"
                 src={`${data.icon}`}
             />
+            <p className="current-weather__paragraph">Температура: {data.todayTempetature}&#176;</p>
             <p className="current-weather__paragraph">{data.text}</p>
             <div className="current-weather__time-container">
-                <p>{data.name}</p>
+                <p className="current-weather__title">{data.name}</p>
                 <span className="">{`${time}`}</span>
                 <span className="">{`${gettingDate}`}</span>
             </div>
