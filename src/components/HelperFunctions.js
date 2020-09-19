@@ -1,8 +1,3 @@
-export const timeNow = () => {
-    const time = new Date().toLocaleTimeString();
-    return time;
-};
-
 export const getDate = () => {
     const date = new Date().toDateString();
     return date;

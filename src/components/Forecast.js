@@ -4,10 +4,10 @@ const Forecast = ({ data }) => {
 
 
     return(
-    <div>
-        <p>Завтра</p>
-        <p>ыа </p>
-        <p></p>
+    <div className="forecast-card">
+        <p className="forecast-card__title">Завтра</p>
+        <p className="">ыва</p>
+        <p className=""></p>
 
     </div>
     );

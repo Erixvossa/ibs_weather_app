@@ -1,0 +1,8 @@
+@import url(./__image/current-weather__image.css);
+@import url(./__time-container/current-weather__time-container.css);
+
+.current-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

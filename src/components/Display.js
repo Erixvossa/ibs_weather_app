@@ -1,49 +1,23 @@
 import React from "react";
-import { convertTimes, timeNow, getDate } from "./HelperFunctions";
+import { convertTimes, getDate } from "./HelperFunctions";
 import Forecast from "./Forecast";
 
-const Display = ({ data }) => {
-    const showSunrise = convertTimes(data.sunrise);
-    const showSunset = convertTimes(data.sunset);
-    const placeTime = timeNow();
+const Display = ({ data, time }) => {
     const gettingDate = getDate();
 
-
-
     return (
-        <div className="">
-            <div className="">
-                <div className="">
-                    <p>{data.name}</p>
-                </div>
-                <div className="">
-                    <div className="">
-                        <span className="">{`${placeTime}`}</span>
-                        <span className="">{`${gettingDate}`}</span>
-                    </div>
-
-                </div>
+        <div className="current-weather">
+            <img
+                alt=""
+                className="current-weather__image"
+                src={`${data.icon}`}
+            />
+            <p className="current-weather__paragraph">{data.text}</p>
+            <div className="current-weather__time-container">
+                <p>{data.name}</p>
+                <span className="">{`${time}`}</span>
+                <span className="">{`${gettingDate}`}</span>
             </div>
-
-            <div className="">
-                <div className="">
-                    <img
-                        alt=""
-                        className=""
-                        src={`${data.icon}`}
-                    />
-                    <span className="">{data.text}</span>
-                </div>
-
-
-            </div>
-
-            <div>
-                <Forecast data={data}/>
-            </div>
-
-
-
 
 
         </div>

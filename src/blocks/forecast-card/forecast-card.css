@@ -1,0 +1,15 @@
+.forecast-card {
+    flex-direction: column;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    align-self: center;
+    background-color: #aaaaaa;
+    width: 45%;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    margin-top: 2px;
+    position: relative;
+    text-align: center;
+}

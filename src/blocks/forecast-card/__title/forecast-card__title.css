@@ -1,0 +1,6 @@
+.forecast-card__title {
+    display: flex;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
