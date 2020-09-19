@@ -30,17 +30,21 @@ const MainApp = () => {
                 );
                 const allData = axiosData.data;
 
-                const { current, forecast } = allData;
+                const { location, current, forecast } = allData;
+                const { name } = location;
                 const tomorrow = forecast.forecastday[1];
-               const { day } = tomorrow;
-                const tomorrowTemp = day.avgtemp_c;
+                const dayAfterTomorrow = forecast.forecastday[2];
+                //const { day } = tomorrow;
+                //const tomorrowTemp = day.avgtemp_c;
 
                 const { condition } = current;
                 const { icon, text } = condition;
                 const obj = {
+                    name,
                     icon,
                     text,
-                    tomorrowTemp
+                    tomorrow,
+                    dayAfterTomorrow,
                 }
                 console.log(allData);
                 console.log(obj);
@@ -82,8 +86,8 @@ const MainApp = () => {
                             <Form getCity={getCity} />
                             <Display data={data} time={time} />
                             <div className="forecast-container">
-                                <Forecast data={data.tomorrowTemp}/>
-                                <Forecast data={data.tomorrowTemp}/>
+                                <Forecast data={data.tomorrow}/>
+                                <Forecast data={data.dayAfterTomorrow}/>
                             </div>
                         </div>
                     ) : (
