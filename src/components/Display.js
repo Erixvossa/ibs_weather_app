@@ -1,5 +1,5 @@
 import React from "react";
-import { getDate } from "./HelperFunctions";
+import { getDate } from "../helperFunctions/helperFunctions";
 
 
 const Display = ({ data, time }) => {
