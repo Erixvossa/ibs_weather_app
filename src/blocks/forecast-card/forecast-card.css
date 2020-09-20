@@ -1,3 +1,6 @@
+@import url(./__title/forecast-card__title.css);
+@import url(./__image/forecast-card__image.css);
+
 .forecast-card {
     flex-direction: row;
     justify-content: space-around;
@@ -14,4 +17,10 @@
     margin-top: 2px;
     position: relative;
     text-align: center;
+}
+
+@media screen and (max-width: 625px) {
+    .forecast-card {
+        flex-direction: column;
+    }
 }

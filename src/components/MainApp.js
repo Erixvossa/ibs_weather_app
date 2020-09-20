@@ -81,26 +81,26 @@ const MainApp = () => {
 
 
     return (
-        <div>
+        <>
             {!error ? (
-                <div className="">
+                <>
                     {!loading ? (
-                        <div className="">
+                        <>
                             <Form getCity={getCity} />
                             <Display data={data} time={time} />
                             <div className="forecast-container">
                                 <Forecast temp={data.tomorrowTemp} nextDate={data.tomorrowDate} icon={data.tomorrowIcon}/>
                                 <Forecast temp={data.dayAfterTomorrowTemp} nextDate={data.dayAfterTomorrowDate} icon={data.dayAfterTomorrowIcon}/>
                             </div>
-                        </div>
+                        </>
                     ) : (
-                        <h1 className="">Loading...</h1>
+                        <h1 className="loading-state">Подождите, идет загрузка</h1>
                     )}
-                </div>
+                </>
             ) : (
-                <h1 className="">{error}</h1>
+                <h2 className="error-message">Ошибка:{error}</h2>
             )}
-        </div>
+        </>
     );
 };
 

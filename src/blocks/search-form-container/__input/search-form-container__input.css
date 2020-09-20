@@ -1,0 +1,9 @@
+.search-form-container__input{
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: #9E9C9C;
+}

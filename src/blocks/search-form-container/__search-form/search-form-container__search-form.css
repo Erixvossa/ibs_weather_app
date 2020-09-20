@@ -1,0 +1,6 @@
+.search-form-container__search-form {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+}

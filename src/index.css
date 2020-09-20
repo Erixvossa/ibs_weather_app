@@ -1,13 +1,23 @@
 @import url(./blocks/forecast-container/forecast-container.css);
 @import url(./blocks/forecast-card/forecast-card.css);
-@import url(./blocks/search-form/search-form.css);
+@import url(./blocks/search-form-container/search-form-container.css);
 @import url(./blocks/current-weather/current-weather.css);
+@import url(./blocks/error-message/error-message.css);
+@import url(./blocks/loading-state/loading-state.css);
 
 
 .App {
   padding-left: 10%;
   padding-right: 10%;
 }
+
+@media screen and (max-width: 625px) {
+  .App {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
 
 body {
   margin: 0;

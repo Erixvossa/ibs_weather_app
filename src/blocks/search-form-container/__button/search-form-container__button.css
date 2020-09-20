@@ -1,8 +1,4 @@
-.search-form__button {
-    display: inline-block;
-    margin: 0;
-    border: 0;
-    border-radius: 0.317rem;
+.search-form-container__button {
     background-color: #aaa;
     color: #fff;
     text-decoration: none;
@@ -11,6 +7,13 @@
     cursor: pointer;
     -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .search-form__button:hover {

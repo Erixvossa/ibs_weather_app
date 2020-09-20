@@ -8,16 +8,18 @@ const Formm = ({ status, errors, touched, getCity }) => {
     }, [status, getCity]);
 
     return (
-        <div className="search-form">
-            <Form>
-                <label htmlFor="">
-                    <Field type="text" placeholder="Введите город" id="city" name="value" />
-                </label>
-                <button className="search-form__button" type="submit">Search</button>
-                {errors.value && touched.value && (
-                    <p className="">{errors.value}</p>
-                )}
-            </Form>
+        <div className="search-form-container">
+            <div className="search-form-container__search-form">
+                <Form>
+
+                    <Field className="search-form-container__input" type="text" placeholder="Введите город" id="city" name="value" />
+
+                    <button className="search-form-container__button" type="submit">Search</button>
+                    {errors.value && touched.value && (
+                        <h2 className="search-form-container__paragraph">{errors.value}</h2>
+                    )}
+                </Form>
+            </div>
         </div>
     );
 };

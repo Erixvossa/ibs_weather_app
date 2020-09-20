@@ -1,5 +1,5 @@
 const initialValue = {
-    result: "las vegas",
+    result: "Москва",
     loading: false,
     data: {},
     error: ""
